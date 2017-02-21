@@ -1,5 +1,0 @@
-My test -- From Local
-
-My test -- From Remote
-
-My test -- Testing to see if I can push from cmd line as my pull test was successful
