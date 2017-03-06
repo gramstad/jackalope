@@ -1,0 +1,13 @@
+02/26/2017
+
+I've been working for the last 12 hours on and off on the App trying to get the database up and running. I've had a bit of succcess and should have the bulk of the baseline product information for Magic singles in a couple of hours. I have all of the cards in a table that link back to the reference data. I just need to get the set information and card number in the product support tables and I'll have the basis I need to form the actual product records. From there I can build basic pricing and condition tables.
+
+I need to keep in mind that I'm trying to get a MVP (minimal viable product) kind of thing out there. I need to be able to order cards, put that order into the App. When I receive those cards and I have broken them down by set and by card I need to be able to select the sets that I have and create a spreadsheet that I can update and import to the App to update inventory. I need some stored procedures to update the data and generate CSV files for upload to eBay. It will be clunky but it will be good enough. I should be able to get the orders off of eBay from their email system. I think I will use biggerbids.com for image hosting and template generation. For now I'll be handling all communication with customers on the platforms themselves or on 3rd party tools like garagesale for eBay.
+
+Orders that come in will be imported into the App and regurgitated as pick lists and invoices. They will also be exported out to Stamps.com for shipping fulfillment. Ideally the App would be able to add and reconcile orders to a customer account based on an address and/ or email so as to build a marketing list for later use as well. I don't plan on spamming emails but direct mail could still be effective in this market and would be worth a shot. May not be worth doing until I have my site on Shopify and can track the response.
+
+I am going to be spending a lot of time working directly with postgres and the terminal massaging information and establishing a workflow. My goal is then to automate as much of this workflow as possible by doing Python things. For now running scripts is fine and I think I'll learn a lot. I just need to keep the processes documented and scheduled so that the data doesn't get weird.
+
+- Product catalog for singles, play sets and bulk items for M:TG
+- Conditions support for M:TG
+- Initial pricing
