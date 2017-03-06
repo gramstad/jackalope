@@ -1,4 +1,4 @@
--- alter 1.0.6  updated 03/05/2017  nrg
+-- alter 1.0.6  updated 03/06/2017  nrg
 -- populating product_mtg_card
 
 -- log in to psql using jackalope_test or jackalope with your user
