@@ -1,11 +1,14 @@
--- Alter 1.0.0  2/19/17 Nick Gramstad
--- Creates database, creates user nick
+-- Alter 1.0.0  03/05/17 Nick Gramstad
+-- create database and users
 
--- Normally would have language here to make sure that all alters are applied but since this is the first file it is not neccessary.
-DROP DATABASE if exists "jackalope";
+-- script will be run from psql on the main postgres database w/ user postgres
+-- \i /users/nickgramstad/documents/jackalope/alters/alter_1.0.0.sql
+drop database if exists "jackalope";
 
-CREATE DATABASE jackalope
-    WITH
+drop database if exists "jackalope_test";
+
+create database jackalope_test
+    with
     OWNER = postgres
     ENCODING = 'UTF8'
     LC_COLLATE = 'C'
@@ -13,6 +16,20 @@ CREATE DATABASE jackalope
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
 
-  create user nick with
-    PASSWORD '1888$celtic'
-    CREATEDB;
+create database jackalope
+      with
+      OWNER = postgres
+      ENCODING = 'UTF8'
+      LC_COLLATE = 'C'
+      LC_CTYPE = 'C'
+      TABLESPACE = pg_default
+      CONNECTION LIMIT = -1;
+
+drop user if exists nick;
+
+create user nick with
+        SUPERUSER
+        PASSWORD '1888$celtic'
+        CREATEDB;
+
+commit;
